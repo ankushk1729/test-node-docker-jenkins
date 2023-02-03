@@ -4,10 +4,10 @@ node {
     }
 
     stage('build docker image') {
-        docker build -t test-node-docker-jenkins .
+        sh 'docker build -t test-node-docker-jenkins .'
     }
 
     stage('Run docker image') {
-        docker run -p 3000:3000 test-node-docker-jenkins
+        sh 'docker run -p 3000:3000 test-node-docker-jenkins'
     }
 }
