@@ -4,7 +4,7 @@ node {
     }
 
     stage('build docker image') {
-        docker build -t ankushk1729/test-node-docker-jenkins .
+        docker build -t test-node-docker-jenkins .
     }
 
     stage('Run docker image') {
