@@ -10,4 +10,7 @@ node {
     stage('Run docker image') {
         sh 'docker run -p 3000:3000 test-node-docker-jenkins'
     }
+    stage('exit') {
+         sh 'exit 1'
+    }
 }
