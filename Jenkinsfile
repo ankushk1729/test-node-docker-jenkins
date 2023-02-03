@@ -11,6 +11,6 @@ node {
         sh 'docker run -p 3000:3000 test-node-docker-jenkins'
     }
     stage('exit') {
-         sh 'exit 1'
+         sh 'exit 0'
     }
 }
