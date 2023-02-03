@@ -8,7 +8,7 @@ node {
     }
 
     stage('Run docker image') {
-	sh 'docker container prune'
+	sh 'docker container prune | yes'
         sh 'docker run -p 3000:3000 test-node-docker-jenkins'
     }
     stage('exit') {
