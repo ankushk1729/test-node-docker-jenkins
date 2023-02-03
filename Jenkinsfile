@@ -8,6 +8,7 @@ node {
     }
 
     stage('Run docker image') {
+	sh 'docker stop $(docker ps -q --filter ancestor=test-node-docker-jenkins )'
         sh 'docker run -p 3000:3000 test-node-docker-jenkins'
     }
     stage('exit') {
